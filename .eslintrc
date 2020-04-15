@@ -1,0 +1,115 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "globals": {
+      "__DEV__": true,
+      "__PROD__": true,
+      "i18n": true
+    },
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "no-console": [2, {"allow": ["warn", "error"]}],
+      "arrow-parens": [0, "as-needed"],
+      "comma-dangle": ["error", {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }],
+      "no-confusing-arrow": 0,
+      "no-plusplus": 0,
+      "no-sequences": 0,
+      "camelcase": [0, { "properties": "always" }],
+      "semi": [2, "never"],
+      "global-require": 0,
+      "no-param-reassign": ["error", { "props": false }],
+      "object-property-newline": 0,
+      "no-mixed-operators": [
+          "error",
+          {
+              "groups": [
+                  ["*", "/", "%", "**"],
+                  ["&", "|", "^", "~", "<<", ">>", ">>>"],
+                  ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+                  ["&&", "||"],
+                  ["in", "instanceof"]
+              ],
+              "allowSamePrecedence": true
+          }
+      ],
+      "implicit-arrow-linebreak": 0,
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js"]}],
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^ignore"
+        }
+      ],
+      "no-void": 0,
+      "no-bitwise": ["error", { "int32Hint": true }],
+      "no-prototype-builtins": 0,
+      "no-restricted-syntax": 0,
+      "no-nested-ternary": 0,
+      "max-classes-per-file": 0,
+      "valid-typeof": 0,
+      "object-curly-newline": 0,
+      "function-paren-newline": 0,
+      "prefer-destructuring": [0, {"object": true, "array": false}],
+      "react/destructuring-assignment": 0,
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+      "react/jsx-one-expression-per-line": 0,
+      "react/forbid-prop-types": 0,
+      "react/jsx-closing-bracket-location": [
+          2, {"selfClosing": "after-props", "nonEmpty": "after-props"}
+      ],
+      "react/state-in-constructor": [1, "never"],
+      "react/static-property-placement": 0,
+      "react/jsx-props-no-spreading": 0,
+      "react/prefer-stateless-function": "off",
+      "react/sort-comp": [1, {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "/^awaitScripts$/",
+          "/^initialize.+$/",
+          "/^load.+$/",
+          "/^reset.+$/",
+          "/^handle.+$/",
+          "everything-else",
+          "rendering"
+        ],
+        "groups": {
+          "rendering": [
+            "/^render.+$/",
+            "render"
+          ]
+        }
+      }],
+      "jsx-a11y/anchor-is-valid": 0,
+      "jsx-a11y/click-events-have-key-events": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"]
+        }
+      }
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true,
+        "modules": true,
+        "ecmascript": 6,
+        "jsx": true
+      }
+    }
+  }
+  
