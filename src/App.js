@@ -4,7 +4,7 @@ import axios from 'axios'
 import searchIcon from './search.svg'
 import './App.css'
 
-const API_KEY = 'AIzaSyCYMjticrN8B3-EMXKlP5HPyiaPOeqLgaY'
+const API_KEY = ''
 const API_PATH = 'https://www.googleapis.com/youtube/v3/search'
 const MAX_ROWS = 50
 const PAGE_ROWS = 10
